@@ -9,5 +9,5 @@ FROM node:18
 WORKDIR /opt/app
 COPY --from=build /opt/app/dist ./dist
 ADD package*.json ./
-RUN npm ci --omit=dev
+# RUN npm ci --omit=dev
 CMD ["node", "./index.js"]
